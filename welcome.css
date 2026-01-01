@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(circle at top, #1e1e2f, #0b0b15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Center container */
+.container {
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 38px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px rgba(120, 120, 255, 0.6);
+}
+
+/* Glowing Button */
+.glow-btn {
+    padding: 18px 36px;
+    font-size: 18px;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    background: linear-gradient(90deg, #7f00ff, #00c6ff);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+/* Glow effect */
+.glow-btn::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    background: linear-gradient(90deg, #7f00ff, #00c6ff, #7f00ff);
+    border-radius: 40px;
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Hover animation */
+.glow-btn:hover {
+    transform: scale(1.08);
+}
