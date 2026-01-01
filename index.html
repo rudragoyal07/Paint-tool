@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paint Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <header class="app-header">🎨 Paint Tool by Rudra Goyal</header>
+
+    <div class="toolbar">
+
+        <!-- DRAWING TOOLS -->
+        <div class="tool-group">
+            <label>Tools</label>
+            <button class="tool-btn active" data-tool="pencil">Pencil</button>
+            <button class="tool-btn" data-tool="pen">Pen</button>
+            <button class="tool-btn" data-tool="sketch">Sketch</button>
+            <button class="tool-btn" data-tool="text" id="textTool">Text</button>
+        </div>
+
+        <!-- SHAPES -->
+        <div class="tool-group">
+            <label>Shapes</label>
+            <button class="tool-btn shape-btn" data-tool="shape" data-shape="circle">◯</button>
+            <button class="tool-btn shape-btn" data-tool="shape" data-shape="square">□</button>
+            <button class="tool-btn shape-btn" data-tool="shape" data-shape="rectangle">▭</button>
+            <button class="tool-btn shape-btn" data-tool="shape" data-shape="triangle">△</button>
+            <button class="tool-btn shape-btn" data-tool="shape" data-shape="oval">⬭</button>
+        </div>
+
+        <!-- FONT SIZE -->
+        <div class="tool-group">
+            <label>Font Size</label>
+            <select id="fontSize" class="select-box">
+                <option>10</option><option>12</option><option>14</option>
+                <option selected>16</option><option>18</option>
+                <option>20</option><option>22</option><option>24</option>
+            </select>
+        </div>
+
+        <!-- FONT TYPE -->
+        <div class="tool-group">
+            <label>Font Type</label>
+            <select id="fontFamily" class="select-box">
+                <option value="Arial">Normal</option>
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Courier New">Courier New</option>
+            </select>
+        </div>
+
+        <!-- COLORS -->
+        <div class="tool-group">
+            <label>Colors</label>
+            <div class="color-palette">
+                <span class="color black"></span>
+                <span class="color red"></span>
+                <span class="color orange"></span>
+                <span class="color yellow"></span>
+                <span class="color green"></span>
+                <span class="color darkgreen"></span>
+                <span class="color blue"></span>
+                <span class="color indigo"></span>
+                <span class="color violet"></span>
+            </div>
+        </div>
+
+        
+        <div class="tool-group">
+            <label>Actions</label>
+            <button id="undoBtn" class="action-btn">Undo</button>
+            <button id="redoBtn" class="action-btn">Redo</button>
+            <button id="saveBtn" class="action-btn save-btn">Save</button>
+        </div>
+
+    </div>
+
+    <div class="canvas-container">
+        <canvas id="paintCanvas"></canvas>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
